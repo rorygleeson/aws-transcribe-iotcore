@@ -3,6 +3,9 @@
 ![My Image](photo1.png)
 
 
+
+## Introduction ##
+
 This project connects AWS Transcribe, a service that converts voice audio to text, to AWS IoT Core, a service used for secure
 communications with Iot devices. This means we can control our IoT device with voice commands. 
 The ESP32 device is connected to an SG90 Servo motor, which in turn is used to control the lego rebot. The device can of course do any other action, just replace the robot part of the device code if required. For example you could just flash a LED instead of controlling a servo. But thats not as much fun ;-) The ESP32 uses WIFI for connectivity, the local WIFI network access details are stored in the ESP32 secrets.h file. Also stored in secrets.h file are the x.509 certificates used for the secure MQTT communication.
@@ -19,3 +22,25 @@ The following code will be provided in this project. The solution contains the f
 Here is a digram of the overall architecture. Please read the readme file associated with each of the 3 components. 
 
 ![My Image](architectureAll.png)
+
+
+
+
+
+## Setup Instructions ##
+
+As per above, the code is broken down into 3 parts. 
+
+We have code on the ESP32 device itself, which is subscribing to MQTT topic esp32/sub listening for events  It also publishes a message to MQTT topic esp32/pub every 5 seconds. 
+
+We have all the AWs backend serverless infrastructure, we will use Serverless Application Model (SAM). 
+The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. We will use the AWS SAM CLI to create a serverless application that we can package and deploy in the AWS Cloud. The SAM contains ALL the AWs infrastructure required for this project. Since AWS Cloud 9 comes with SAM already installed, we use Cloud 9 as our development environment. But you can use any other development environment just ensure it is setup accordingly to support AWS CLI and SAM CLI. 
+
+
+
+Finally we have the application running on our laptop which has a microphone enabled. This python application requires AWS CLI to be installed on your laptop. I have used Mac OS and terminal. 
+
+
+
+
+
