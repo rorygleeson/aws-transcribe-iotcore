@@ -18,4 +18,4 @@ Application : The **transcribe-python-app** folder contains the Python script to
 
 Here is a digram of the overall architecture. Please read the readme file associated with each of the 3 components. 
 
-![My Image](architectureAWS.png)
+![My Image](architectureAll.png)
