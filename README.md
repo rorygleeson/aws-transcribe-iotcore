@@ -29,7 +29,7 @@ Here is a digram of the overall architecture. Please read the readme file associ
 
 
 
-
+<br/><br/>
 ## Setup Instructions ##
 
 As per above, the code is broken down into 3 parts. 
@@ -49,6 +49,8 @@ We will then test it is working using the AWS IoTCore MQTT client to simulate th
 Next we will program the ESP32 device with the necessray code. We will then test that the device is able to send and receive MQTT messages to/from AWS IoTCore. 
 
 Finally, we will setup the python application and integrate AWS transcribe into the solution, we voice commands can trigger an event to the ESP32, which in turn can take an action (turning the servo). 
+
+<br/><br/>
 
 *** Step 1 ***
 
