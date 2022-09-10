@@ -5,7 +5,7 @@
 
 This project connects AWS Transcribe, a service that converts voice audio to text, to AWS IoT Core, a service used for secure
 communications with Iot devices. This means we can control our IoT device with voice commands. 
-The ESP32 device is connected to an SG90 Servo motor, which in turn is used to control the lego rebot. The device can of course do any other action, just replace the robot part of the device code if required. The ESP32 uses WIFI for connectivity, the local WIFI network access details are stored in the ESP32 secrets.h file. Also stored in secrets.h file are the x.509 certificates used for the secure MQTT communication.
+The ESP32 device is connected to an SG90 Servo motor, which in turn is used to control the lego rebot. The device can of course do any other action, just replace the robot part of the device code if required. For example you could just flash a LED instead of controlling a servo. But thats not as much fun ;-) The ESP32 uses WIFI for connectivity, the local WIFI network access details are stored in the ESP32 secrets.h file. Also stored in secrets.h file are the x.509 certificates used for the secure MQTT communication.
 
 The following code will be provided in this project. The solution contains the following 3 components.
 
