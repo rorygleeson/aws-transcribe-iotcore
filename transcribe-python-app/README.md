@@ -1,4 +1,4 @@
-transcribe-python-app
+# transcribe-python-app
 
 
 Simple Python script to do real-time speech to text translation. Talk into microphone, get text output.
