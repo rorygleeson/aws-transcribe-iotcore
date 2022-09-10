@@ -130,7 +130,7 @@ void setup() {
 void loop() {
   publishMessage();
   client.loop();
-  delay(1000);
+  delay(5000);
 }
 
 
