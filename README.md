@@ -21,7 +21,7 @@ The following code will be provided in this project. The solution contains the f
 
 
 Here is a digram of the overall architecture. Please read the readme file associated with each of the 3 components. 
-
+<br /> <br /> 
 ![My Image](architectureAll.png)
 
 
