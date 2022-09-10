@@ -7,8 +7,9 @@
 ## Introduction ##
 
 This project connects AWS Transcribe, a service that converts voice audio to text, to AWS IoT Core, a service used for secure
-communications with Iot devices. This means we can control our IoT device with voice commands. 
-The ESP32 device is connected to an SG90 Servo motor, which in turn is used to control the lego rebot. The device can of course do any other action, just replace the robot part of the device code if required. For example you could just flash a LED instead of controlling a servo. But thats not as much fun ;-) The ESP32 uses WIFI for connectivity, the local WIFI network access details are stored in the ESP32 secrets.h file. Also stored in secrets.h file are the x.509 certificates used for the secure MQTT communication.
+communications with IoT devices. This means we can control our IoT device with voice commands!!!
+
+The ESP32 device is connected to an SG90 Servo motor, which in turn is used to control the lego rebot. The device can of course do any other action, just replace the robot part of the device code if required. For example you could just flash a LED instead of controlling a servo. But thats not as much fun ;-) The ESP32 uses WIFI for connectivity, the local WIFI network access details are stored in the ESP32 secrets.h file. Also stored in secrets.h file are the X.509 certificates used for the secure MQTT communication.
 
 The following code will be provided in this project. The solution contains the following 3 components.
 
@@ -39,6 +40,22 @@ The AWS Serverless Application Model (SAM) is an open-source framework for build
 
 
 Finally we have the application running on our laptop which has a microphone enabled. This python application requires AWS CLI to be installed on your laptop. I have used Mac OS and terminal. 
+
+
+We will setup our environment as follows:
+
+First we will setup the AWS serverless backend infrastructure. We will use SAM to deploy this into our AWS account. 
+We will then test it is working using the AWS IoTCore MQTT client to simulate the ESP32 sensor. 
+
+Next we will program the ESP32 device with the necessray code. We will then test that the device is able to send and receive MQTT messages to/from AWS IoTCore. 
+
+Finally, we will setup the python application and integrate AWS transcribe into the solution, we voice commands can trigger an event to the ESP32, which in turn can take an action (turning the servo). 
+
+*** Step 1 ***
+
+*** Step 2 ***
+
+*** Step 3 ***
 
 
 
