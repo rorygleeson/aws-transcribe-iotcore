@@ -32,15 +32,12 @@ Here is a digram of the overall architecture. Please read the readme file associ
 
 As per above, the code is broken down into 3 parts. 
 
-We have code on the ESP32 device itself, which is subscribing to MQTT topic esp32/sub listening for events  It also publishes a message to MQTT topic esp32/pub every 5 seconds. 
+We have device code on the ESP32, which is subscribing to MQTT topic esp32/sub listening for events.  It also publishes a message to MQTT topic esp32/pub every 5 seconds. 
 
 We have all the AWs backend serverless infrastructure, we will use Serverless Application Model (SAM). 
 The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. We will use the AWS SAM CLI to create a serverless application that we can package and deploy in the AWS Cloud. The SAM contains ALL the AWs infrastructure required for this project. Since AWS Cloud 9 comes with SAM already installed, we use Cloud 9 as our development environment. But you can use any other development environment just ensure it is setup accordingly to support AWS CLI and SAM CLI. 
 
-
-
 Finally we have the application running on our laptop which has a microphone enabled. This python application requires AWS CLI to be installed on your laptop. I have used Mac OS and terminal. 
-
 
 We will setup our environment as follows:
 
