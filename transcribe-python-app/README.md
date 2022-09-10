@@ -13,4 +13,4 @@ python pip install sounddevice
 
 Ensure AWS CLI configured with necessary IAM user details.
 
-* Note * I have tested this on Mac OS terminal. 
+* Note * I have tested this on Mac OS terminal, but you can use any environment. 
