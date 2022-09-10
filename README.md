@@ -2,6 +2,7 @@
 
 ![My Image](photo1.png)
 
+<img src="photo1.png" width="150" height="280">
 
 
 ## Introduction ##
