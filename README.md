@@ -1,8 +1,7 @@
 # aws-transcribe-iotcore-lego
 
-![My Image](photo1.png)
 
-<img src="photo1.png" width="150" height="280">
+<img src="photo1.png" width=70%>
 
 
 ## Introduction ##
