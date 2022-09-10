@@ -20,8 +20,10 @@ The following code will be provided in this project. The solution contains the f
 **Application** : The **transcribe-python-app** folder contains the Python script to run on the computer that the users microphone is connected to. It streams the audio up to AWS transcribe using API, and processes the returned text version of the audio. It analises the returned text, and when it detects the key word has been said, it will send a HTTP Post request to the API Gateway which triggers an MQTT event for the ESP32. The ESP32 then turns the servo on to control the robot. 
 
 
-Here is a digram of the overall architecture. Please read the readme file associated with each of the 3 components. 
-<br /> <br /> 
+Here is a digram of the overall architecture. Please read the readme file associated with each of the 3 components.    
+
+<br/><br/>
+
 ![My Image](architectureAll.png)
 
 
