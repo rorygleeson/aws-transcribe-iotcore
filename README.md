@@ -1,7 +1,7 @@
 # aws-transcribe-iotcore-lego
 
 
-<img src="photo1.png" width=70%>
+<img src="esp32-lego-robot.jpg" width=70%>
 
 
 ## Introduction ##
