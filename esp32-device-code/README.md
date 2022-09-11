@@ -84,24 +84,37 @@ This assumes you are powering the dev board via micro usb cable. With batteries 
 ### Step 2  Setup the Arduino IDE for ESP32 ### 
 
 
-The Arduino IDE is an open-source development environment for programming microcontrollers. It can support a continuously growing number of platforms including most ESP32-based modules. It must be installed along with the ESP32 board definitions, MQTT library, and ArduinoJson library.
-
 Download the Arduino installer for the desired operating system.
 
 Start Arduino and open the Preferences window.
 
 For Additional Board Manager URLs, add
+
 https://dl.espressif.com/dl/package_esp32_index.json.
 
 Choose Tools, Board, Boards Manager.
 
-Search esp32 and install the latest version.
+Search esp32 and install the latest version by Espressif Systems.
 
 Choose Sketch, Include Library, Manage Libraries.
 
 Search MQTT, and install the latest version by Joel Gaehwiler.
+[https://www.arduino.cc/reference/en/libraries/mqtt/](https://github.com/256dpi/arduino-mqtt)
+
+
 
 Repeat the library installation process for ArduinoJson.
+[https://github.com/bblanchon/ArduinoJson/](https://github.com/bblanchon/ArduinoJson)
+
+
+
+
+
+Search Servo (if connecting to servo motor) and download the 
+
+
+
+
 
 The Arduino IDE is now installed and configured with all the board definitions and libraries needed for this walkthrough.
 
