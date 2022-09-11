@@ -30,17 +30,17 @@ Here is a digram of the overall architecture. Please read the readme file associ
 ![My Image](architectureHighLevel.png)
 <br/><br/>
 
-**1**
+**1** Microphone audio signal is processed by the python script. It sends the audio data to AWS Transcribe API. 
 
-**2**
+**2** AWS Transcribe uses AI/ML to convert the audio stream to text. It returns the text version of the audio to the python script. 
 
-**3**
+**3** The pyhton script is checking for the key word or phrase that will trigger an action to the ESP32. When it detects the key word, it performs a HTTP POST request to the AWS API gateway. 
 
-**4**
+**4** The API gateway will then call a Lambda function. The lambda function will publish a messages to IoTCore MQTT broker esp32/sub. 
 
-**5**
+**5** A message arrives on the esp32/sub topic in IoTCore.
 
-**6**
+**6** The ESP32 deice is subscribed to the topic esp32/sub. It accepts the messages and performs the robot action, in this case turning the servo. 
 
 
 <br/><br/>
