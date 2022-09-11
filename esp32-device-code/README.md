@@ -14,12 +14,18 @@ To setup an IoT device, in this case the ESP32, to communicate securely with AWS
 ### Step 1  Creating an AWS IoT device ### 
 
 
-In the AWS IoT Core console, go to Manage -> Things. 
+In the AWS IoT Core console, go to Manage -> Things
+
 Choose "Create Things"
+
 Choose "Create a single thing"
+
 Under "Specify thing properties" give the thing a name, for example ESP32-00001. Leave the remaining values set to their default. Click "Next".
+
 Under "Configure device certificate" select "Auto-generate a new certificate" and click "Next".
+
 Under "Attach policies to certificate" select create a new policy. 
+
 
 Use this JSON for the policy and update REGION and ACCOUNT_ID with your region (example = ap-southeast-2) and your account ID (example = 501XXXXXX449).
 Paste this JSON into the policy. 
