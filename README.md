@@ -55,12 +55,18 @@ Finally, we will setup the python application and integrate AWS transcribe into 
 
 <br/><br/>
 
-*** Step 1 ***
+***Step 1***
 
-*** Step 2 ***
+Setup the AWS infrastructure. Follow the setup and test instructions from [sam-lambda-iot-rule](sam-lambda-iot-rule) to setup the infrastructure in your AWS account. We use Cloud 9 to do this. 
 
-*** Step 3 ***
 
+***Step 2***
+
+Program the ESP32 device using Arduino IDE. Follw the setup and test instructions from [esp32-device-code](esp32-device-code) to get the ESP32 communicating with IoTCore. 
+
+***Step 3***
+
+Setup and test the python application which converts audio from microphone and triggers the IoT event towards the ESP32 to move the servo, when the trigger word id detected. 
 
 
 
