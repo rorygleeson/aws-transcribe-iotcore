@@ -80,6 +80,7 @@ I have used the Wemos Lolin32 dev board, but you can use any ESP32 dev board, ju
 
 Connect the servo control to GPIO 12. Connect servo positive to 5v output on ESP32 dev board. Connect servo ground to ground on ESP32 dev board. 
 This assumes you are powering the dev board via micro usb cable. With batteries the 5V output may not be guaranteed, so you may require additonal circuitry. 
+Note: You can leave out the Servo and do something else, for example flash a LED. You only need to update the code in the runRobot() function in the main arduino program file. 
 
 ### Step 2  Setup the Arduino IDE for ESP32 ### 
 
