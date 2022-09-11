@@ -71,10 +71,18 @@ You will see Under Manage-> Things that the new thing has been created. You will
 
 Congradulations, the ESP32 device has been provisioned into IoT Core.
 
+### Step 2  Connect Servo to ESP32 (optional) ### 
+
+If you want to connect to lego, you will need a servo motor. The following diagram shows how this is wired up to the ESP32. 
+I have used the Wemos Lolin32 dev board, but you can use any ESP32 dev board, just update the arduino program to reflect the pin you use to drive the servo. 
+
+<img src="esp32-servo.jpg" width=40%>
+
+
+
+
 
 ### Step 2  Setup the Arduino IDE for ESP32 ### 
-
-
 
 ###  Step 3  Program the ESP32 with the device code ### 
 
