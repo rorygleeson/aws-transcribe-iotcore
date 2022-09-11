@@ -21,26 +21,54 @@ Under "Specify thing properties" give the thing a name, for example ESP32-00001.
 Under "Configure device certificate" select "Auto-generate a new certificate" and click "Next".
 Under "Attach policies to certificate" select create a new policy. 
 
+Use this JSON for the policy and update REGION and ACCOUNT_ID with your region (example = ap-southeast-2) and your account ID (example = 501XXXXXX449).
+Paste this JSON into the policy. 
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": "arn:aws:iot:REGION:ACCOUNT_ID:client/ESP32-00001"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": "arn:aws:iot:REGION:ACCOUNT_ID:topicfilter/esp32/sub"
+    },
+	{
+      "Effect": "Allow",
+      "Action": "iot:Receive",
+      "Resource": "arn:aws:iot:REGION:ACCOUNT_ID:topic/esp32/sub"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": "arn:aws:iot:REGION:ACCOUNT_ID:topic/esp32/pub"
+    }
+  ]
+}
 
 
+Click Create Policy
 
+Go back to the "Attach policies to certificate" screen, and select the Policy you just created.
 
+Click "Create Thing"
 
+On the "Download certificates and keys" you must download the certificates. Download and save them somewhere secure, as they will be used when programming the ESP32 device. You will need the Public key file, Private key file and Amazon Root CA 1.
 
+Click "Done"
 
- Choose Create certificate. Only the thing cert, private key, and Amazon Root CA 1 downloads are necessary for the ESP32 to connect. Download and save them somewhere secure, as they are used when programming the ESP32 device.
-Choose Activate, Attach a policy.
-Skip adding a policy, and choose Register Thing.
-In the AWS IoT console side menu, choose Secure, Policies, Create a policy.
-Name the policy Esp32Policy. Choose the Advanced tab.
-Paste in the following policy template.
+You will see Under Manage-> Things that the new thing has been created. You will see that it has a Certificate attached. Click on the Certificate and you will see the Policy you created attached. 
 
-
-
-
+Congradulations, the ESP32 device has been provisioned into IoT Core.
 
 
 ### Step 2  Setup the Arduino IDE for ESP32 ### 
+
+
 
 ###  Step 3  Program the ESP32 with the device code ### 
 
