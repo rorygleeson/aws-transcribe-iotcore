@@ -48,7 +48,7 @@ Paste this JSON into the policy.
       "Resource": "arn:aws:iot:REGION:ACCOUNT_ID:topic/esp32/pub"
     }
   ]
-}```
+}
 
 
 Click Create Policy
