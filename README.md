@@ -27,7 +27,7 @@ Here is a digram of the overall architecture. Please read the readme file associ
 
 <br/><br/>
 
-![My Image](architectureAll.png)
+![My Image](architectureHighLevel.png)
 
 
 
