@@ -76,7 +76,7 @@ Congradulations, the ESP32 device has been provisioned into IoT Core.
 If you want to connect to lego, you will need a servo motor. The following diagram shows how this is wired up to the ESP32. 
 I have used the Wemos Lolin32 dev board, but you can use any ESP32 dev board, just update the arduino program to reflect the pin you use to drive the servo. 
 
-<img src="esp32-servo.jpg" width=40%>
+<img src="ESP32Circuit.png" width=50%>
 
 
 
