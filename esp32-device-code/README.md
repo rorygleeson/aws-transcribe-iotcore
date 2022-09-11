@@ -80,8 +80,6 @@ I have used the Wemos Lolin32 dev board, but you can use any ESP32 dev board, ju
 
 
 
-
-
 ### Step 2  Setup the Arduino IDE for ESP32 ### 
 
 ###  Step 3  Program the ESP32 with the device code ### 
