@@ -66,7 +66,7 @@ Program the ESP32 device using Arduino IDE. Follw the setup and test instruction
 
 ***Step 3***
 
-Setup and test the python application which converts audio from microphone and triggers the IoT event towards the ESP32 to move the servo, when the trigger word id detected. 
+Setup and test the python application which converts audio from your microphone into text, and triggers the IoT event towards the ESP32 to move the servo, when the trigger word is detected. Follow the setup and test instructions from [transcribe-python-app](transcribe-python-app).
 
 
 
