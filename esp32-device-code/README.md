@@ -78,9 +78,25 @@ I have used the Wemos Lolin32 dev board, but you can use any ESP32 dev board, ju
 
 <img src="ESP32Circuit.png" width=50%>
 
-
+Connect the servo control to GPIO 12. Connect servo positive to 5v output on ESP32 dev board. Connect servo ground to ground on ESP32 dev board. 
+This assumes you are powering the dev board via micro usb cable. With batteries the 5V output may not be guaranteed, so you may require additonal circuitry. 
 
 ### Step 2  Setup the Arduino IDE for ESP32 ### 
+
+
+The Arduino IDE is an open-source development environment for programming microcontrollers. It can support a continuously growing number of platforms including most ESP32-based modules. It must be installed along with the ESP32 board definitions, MQTT library, and ArduinoJson library.
+
+Download the Arduino installer for the desired operating system.
+Start Arduino and open the Preferences window.
+For Additional Board Manager URLs, add
+https://dl.espressif.com/dl/package_esp32_index.json.
+Choose Tools, Board, Boards Manager.
+Search esp32 and install the latest version.
+Choose Sketch, Include Library, Manage Libraries.
+Search MQTT, and install the latest version by Joel Gaehwiler.
+Repeat the library installation process for ArduinoJson.
+The Arduino IDE is now installed and configured with all the board definitions and libraries needed for this walkthrough.
+
 
 ###  Step 3  Program the ESP32 with the device code ### 
 
