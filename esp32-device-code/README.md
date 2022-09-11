@@ -23,7 +23,7 @@ Under "Attach policies to certificate" select create a new policy.
 
 Use this JSON for the policy and update REGION and ACCOUNT_ID with your region (example = ap-southeast-2) and your account ID (example = 501XXXXXX449).
 Paste this JSON into the policy. 
-
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -48,7 +48,7 @@ Paste this JSON into the policy.
       "Resource": "arn:aws:iot:REGION:ACCOUNT_ID:topic/esp32/pub"
     }
   ]
-}
+}```
 
 
 Click Create Policy
