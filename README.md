@@ -28,8 +28,19 @@ Here is a digram of the overall architecture. Please read the readme file associ
 <br/><br/>
 
 ![My Image](architectureHighLevel.png)
+<br/><br/>
 
+**1**
 
+**2**
+
+**3**
+
+**4**
+
+**5**
+
+**6**
 
 
 <br/><br/>
