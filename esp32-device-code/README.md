@@ -3,17 +3,12 @@
 
 ### Solution overview ### 
 
-To setup an IoT device, in this case the ESP32, to communicate securely with AWS IoTCore, follow the steps shown below.
+To setup an IoT device, in this case the ESP32, to communicate securely with AWS IoTCore, follow the steps shown below. This involves the following steps.
 
-We will:
-
-Create an AWS IoT device in AWS IoTCore. 
-
-Setup the Arduino IDE for ESP32
-
-Program the ESP32 with the device code
-
-Monitor and test ESP32 can send and receive data from IoTCore. 
+- Create an AWS IoT device in AWS IoTCore. 
+- Setup the Arduino IDE for ESP32
+- Program the ESP32 with the device code
+- Monitor and test ESP32 can send and receive data from IoTCore. 
 
 
 ### Step 1  Creating an AWS IoT device ### 
