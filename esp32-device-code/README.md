@@ -55,7 +55,7 @@ Paste this JSON into the policy.
     }
   ]
 }
-
+```
 
 Click Create Policy
 
