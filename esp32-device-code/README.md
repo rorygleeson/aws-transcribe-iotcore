@@ -106,13 +106,8 @@ Search MQTT, and install the latest version by Joel Gaehwiler.
 Repeat the library installation process for ArduinoJson.
 [https://github.com/bblanchon/ArduinoJson/](https://github.com/bblanchon/ArduinoJson)
 
-
-
-
-
-Search Servo (if connecting to servo motor) and download the 
-
-
+If you are using the servo, install this library. Download the zip file and under Sketch-> Include library -> Add .ZIP file. 
+https://github.com/madhephaestus/ESP32Servo/tree/master/examples
 
 
 
