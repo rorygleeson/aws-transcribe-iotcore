@@ -39,17 +39,18 @@ As per above, the code is broken down into 3 parts.
 
 We have device code on the ESP32, which is subscribing to MQTT topic esp32/sub listening for events.  It also publishes a message to MQTT topic esp32/pub every 5 seconds. 
 
-We have all the AWs backend serverless infrastructure, we will use Serverless Application Model (SAM). 
-The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. We will use the AWS SAM CLI to create a serverless application that we can package and deploy in the AWS Cloud. The SAM contains ALL the AWs infrastructure required for this project. Since AWS Cloud 9 comes with SAM already installed, we use Cloud 9 as our development environment. But you can use any other development environment just ensure it is setup accordingly to support AWS CLI and SAM CLI. 
+We have to provision all the AWS backend serverless infrastructure, we will use Serverless Application Model (SAM) to do this. 
+The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. We will use the AWS SAM CLI to create a serverless application that we can package and deploy in the AWS Cloud. SAM contains ALL the AWS infrastructure required for this project. Since AWS Cloud 9 comes with SAM already installed, we use Cloud 9 as our development environment. But you can use any other development environment just ensure it is setup accordingly to support AWS SAM CLI. 
 
-Finally we have the application running on our laptop which has a microphone enabled. This python application requires AWS CLI to be installed on your laptop. I have used Mac OS and terminal. 
+Finally we have the application running on our laptop which has a microphone enabled. This python application requires AWS CLI to be installed on your laptop. I have used Mac OS and terminal. The application streams the live audion to AWS transcribe, and analises the returned text for the approriate command to trigger robot action. 
 
-We will setup our environment as follows:
+We will build the complete solution as follows:
 
-First we will setup the AWS serverless backend infrastructure. We will use SAM to deploy this into our AWS account. 
+
+First we will handle the ESP32 device code and device setup in AWS IoTCore. We create an IoT thing in IoTCore. We create X.509 certificates for our thing, and also we create the required IAM policies for the thing. We will program the ESP32 device with the necessray code using a simple sketch and Arduino IDE. We will then test that the device is able to send and receive MQTT messages to/from AWS IoTCore. 
+
+Next we will setup the AWS serverless backend infrastructure. We will use SAM to deploy this into our AWS account. 
 We will then test it is working using the AWS IoTCore MQTT client to simulate the ESP32 sensor. 
-
-Next we will program the ESP32 device with the necessray code. We will then test that the device is able to send and receive MQTT messages to/from AWS IoTCore. 
 
 Finally, we will setup the python application and integrate AWS transcribe into the solution, voice commands can trigger an event to the ESP32, which in turn can take an action (turning the servo). 
 
@@ -57,12 +58,11 @@ Finally, we will setup the python application and integrate AWS transcribe into 
 
 ***Step 1***
 
-Setup the AWS infrastructure. Follow the setup and test instructions from [sam-lambda-iot-rule](sam-lambda-iot-rule) to setup the infrastructure in your AWS account. We use Cloud 9 to do this. 
-
+Configure a thing for the ESP32 in IoTCore. Program the ESP32 device using Arduino IDE. Follw the setup and test instructions from [esp32-device-code](esp32-device-code) to get the ESP32 communicating with IoTCore. 
 
 ***Step 2***
 
-Program the ESP32 device using Arduino IDE. Follw the setup and test instructions from [esp32-device-code](esp32-device-code) to get the ESP32 communicating with IoTCore. 
+Setup the AWS infrastructure. Follow the setup and test instructions from [sam-lambda-iot-rule](sam-lambda-iot-rule) to setup the infrastructure in your AWS account. We use Cloud 9 to do this. 
 
 ***Step 3***
 
