@@ -130,11 +130,6 @@ You will need to install the appropriate USB driver for your OS.
 
 1 	Install the required serial drivers for your device. Some boards use different USB/FTDI chips for interfacing. Here are the most commonly used 		with links to drivers. There are plenty of tuorials on the net to help with this. 
 	
-	CH340
-	Silabs CP210x VCP
-	FTDI
-
-	
 2	Open the Arduino IDE and choose File, New to create a new sketch.
 
 3	Copy the main .ino file from this repository, esp32code.ino and open this in Arduino. Save it.
