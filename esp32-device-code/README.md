@@ -13,7 +13,9 @@ To setup an IoT device, in this case the ESP32, to communicate securely with AWS
 <br/>
 <img src="ESP32-MQTT.png" width=50%>
 
+After completing this, we will be able to send and receive data from the ESP32 to AWs IoT Core. 
 
+<br/>
 
 ### Step 1  Creating an AWS IoT device ### 
 
