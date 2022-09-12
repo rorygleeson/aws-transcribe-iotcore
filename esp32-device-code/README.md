@@ -197,7 +197,7 @@ Publish a message to ESP32 while monitoring the ESP32 in Arduino serial monitor.
 
 When ESP32 receives a message it will print a message to screen. 
 
-<img src="publish2.png" width=50%>
+<img src="publish3.png" width=40%>
 
 
 
