@@ -1,6 +1,6 @@
 # sam-lambda-iot-rule
 
-Deploy a serverless backend that can both send and receive messages on the AWS IoT MQTT topic stream. 
+Deploy a serverless backend that can both send and receive messages on the AWS IoT MQTT message broker. 
 
 We can summarise this infrastructure. 
 
