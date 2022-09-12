@@ -10,7 +10,8 @@ To setup an IoT device, in this case the ESP32, to communicate securely with AWS
 - Program the ESP32 with the device code
 - Monitor and test ESP32 can send and receive data from IoTCore. 
 
-<img src="ESP32MQTT.png" width=50%>
+<br/>
+<img src="ESP32-MQTT.png" width=50%>
 
 
 
