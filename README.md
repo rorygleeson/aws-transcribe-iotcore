@@ -1,7 +1,7 @@
 # aws-transcribe-iotcore
 <br/>
 
-Voice control of an IoT device using AWS Transcribe and Iot Core. 
+Voice control of an IoT device using AWS Transcribe and IoT Core. 
 
 <br/>
 
