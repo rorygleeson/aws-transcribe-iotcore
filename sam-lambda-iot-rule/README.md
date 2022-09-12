@@ -41,8 +41,15 @@ Devices/sensor will send data to an MQTT topic in AWS IoT Core. Messages landing
 
 We can summarise this infrastructure. 
 
-First let us exmaine how data is "received" from a sensor by AWS IoT Core. 
+First let us exmaine how data is "received" from a device by AWS IoT Core. I.E device is uploading data to AWS. 
 
+<br/>
+
+<img src="images/receive-sensordata.png" width=50%>
+
+Now let us examine has data is sent to the sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS Core send message to this topic for the device. 
+
+<img src="images/send-sensorData.png" width=50%>
 
 
 
