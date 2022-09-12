@@ -1,6 +1,7 @@
 # sam-lambda-iot-rule
 
-Deploy a serverless backend that can both send and receive messages on the AWS IoT MQTT topic stream. This includes an AWS Lambda function than can publish an IoT message and a simple AWS IoT Rule that forwards messages from a specific topic to an AWS Lambda function that then updates a DynamoDB table.
+Deploy a serverless backend that can both send and receive messages on the AWS IoT MQTT topic stream. 
+
 
 ```bash
 .
@@ -24,7 +25,7 @@ Deploy a serverless backend that can both send and receive messages on the AWS I
 
 ## topicPublisher
 
-To send a message to the sensor/device, an application is used to send the message first to the AWS API gateway. When the API gateway receives the message, it will forward it to this Lambda. The Lambda will then publish the message onto the MQTT broker topic. The device should be subscribed to this topic, and will receive the message. 
+To send a message to the sensor/device, an application is used to send the message first to the AWS API gateway with REST API. When the API gateway receives the message, it will forward it to this Lambda. The Lambda will then publish the message onto the MQTT broker topic. The device should be subscribed to this topic, and will receive the message. 
 
 
 ## topicSubscriber
@@ -35,6 +36,26 @@ Devices/sensor will send data to an MQTT topic in AWS IoT Core. Messages landing
 
 * PublishTopic: (Required) Provide a topic to publish on when API gateway receives a message. The default will publish on topic_1. 
 * SubscribeTopic: (Required) Provide a topic for the IoT rule to query. This is the topic that the device is publishing to. The default is topic_2. 
+
+
+
+We can summarise this infrastructure. 
+
+First let us exmaine how data is "received" from a sensor by AWS IoT Core. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## How to install 
 
