@@ -94,8 +94,10 @@ sam deploy --guided --stack-name esp32-lambda-iot-rule
 ```
 
 5) For default values type enter. Make sure to set the subsciber and publisher topics to reflect your device code. 
+Since my ESP32 publishes to esp32/pub and subscribes to esp32/sub these are reflected as shown below in the SAM deployment input.
 
-add some stuff here ......
+
+
 
 6) Please wait few minutes to complete the deployment
 
