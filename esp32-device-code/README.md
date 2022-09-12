@@ -150,8 +150,12 @@ You will need to install the appropriate USB driver for your OS.
 Paste the following 3 certs which you downloaded earlier into secrets.h 
 
 **Amazon Root CA 1**
+
 **Device Certificate** (xxx.certificate.pem.crt)
-**Device Private Key** (private.pem.key)	
+
+**Device Private Key** (private.pem.key)
+
+
 
 
 
