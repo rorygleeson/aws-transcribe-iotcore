@@ -101,6 +101,9 @@ Since my ESP32 publishes to esp32/pub and subscribes to esp32/sub these are refl
 
 6) Please wait few minutes to complete the deployment
 
+<img src="images/samDeploymentResult.png" width=80%>
+
+
 
 7) Go into CloudFormation to verify that the stack was sucesfully deployed into your AWS account. 
 
