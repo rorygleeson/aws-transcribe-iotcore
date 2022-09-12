@@ -1,4 +1,9 @@
 # aws-transcribe-iotcore
+<br/><br/>
+
+Voice control of an IoT device using AWS Transcribe and Iot Core. 
+
+<br/><br/>
 
 
 <img src="esp32-lego.jpg" width=60%>
