@@ -124,5 +124,37 @@ The Arduino IDE is now installed and configured with all the board definitions a
 
 ###  Step 3  Program the ESP32 with the device code ### 
 
+We will connect the ESP32 to Arduino IDE using USB serial cable. We also use this USB cable to power the ESP32. 
+You will need to install the appropriate USB driver for your OS. 
+
+1 	Install the required serial drivers for your device. Some boards use different USB/FTDI chips for interfacing. Here are the most commonly used 		with links to drivers. There are plenty of tuorials on the net to help with this. 
+	
+	CH340
+	Silabs CP210x VCP
+	FTDI
+
+	
+2	Open the Arduino IDE and choose File, New to create a new sketch.
+
+3	Copy the main .ino file from this repository, esp32code.ino and open this in Arduino. Save it.
+
+4	Copy the secrets.h from this repository, place into same directory as esp32code.ino
+
+5	Update the secrets.h file. You will need to add the following:
+
+	- THINGNAME	(Set to the name of the thing created in IoT Core)
+	
+	- WIFI_SSID	(Set to the name of the WIFI network the ESP32 will connect to. The network name should not include spaces or special chars)
+	
+	- WIFI_PASSWORD (Set to the WIFI password)
+	
+	- AWS_IOT_ENDPOINT (Set to the value to the value shown in IoT Core -> Settings. It will look like this (a1XXXXXXXXXX1e-ats.iot.ap-southeast-2.amazonaws.com)
+
+	- Paste the certificates you downloaded earlier into the relevant section in secrets.h. You will need the following 3 files. 
+	Amazon Root CA 1, Device Certificate (xxx.certificate.pem.crt), Device Private Key (private.pem.key)
+	
+	
+	
+
 ###  Step 4  Monitor and test ESP32 ### 
 
