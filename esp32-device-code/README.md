@@ -34,7 +34,8 @@ Under "Attach policies to certificate" select create a new policy.
 
 
 Use this JSON for the policy and update REGION and ACCOUNT_ID with your region (example = ap-southeast-2) and your account ID (example = 501XXXXXX449).
-Paste this JSON into the policy. 
+Paste this JSON into the policy. Ensure the thing name (ESP32-00001) is correct and reflects the name of the thing you created. For more information on securing devices, see AWS IoT Policies.
+
 ```json
 {
   "Version": "2012-10-17",
