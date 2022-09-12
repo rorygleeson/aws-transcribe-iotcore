@@ -15,11 +15,11 @@
 
 
 
-// Servo variables
+// Servo variables (optional)
 Servo myservo; // create servo object to control a servo
 int pos = 0;    // variable to store the servo position
 int servoPin = 12;  // Recommended PWM GPIO pins on the ESP32 include 2,4,12-19,21-23,25-27,32-33 
-
+// End Servo variables (optional)
 
 
 WiFiClientSecure net = WiFiClientSecure();
@@ -110,7 +110,7 @@ void runRobot()
 void setup() {
   Serial.begin(9600);
 
-
+  // Servo setup (optional)
   // Allow allocation of all timers
   ESP32PWM::allocateTimer(0);
   ESP32PWM::allocateTimer(1);
@@ -121,7 +121,7 @@ void setup() {
   // using default min/max of 1000us and 2000us
   // different servos may require different min/max settings
   // for an accurate 0 to 180 sweep
-
+  // End Servo setup (optional)
 
   
   connectAWS();
@@ -132,5 +132,3 @@ void loop() {
   client.loop();
   delay(5000);
 }
-
-
