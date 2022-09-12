@@ -193,11 +193,11 @@ The final test is to ensure that the ESP32 can receive messages from AWS IoT Cor
 
 Publish a message to ESP32 while monitoring the ESP32 in Arduino serial monitor. The ESP32 is subscribed to esp32/sub. Therefore from IoT Core we will publish a message to esp32/sub. 
 
-<img src="pub1.png" width=50%>
+<img src="publish1.png" width=50%>
 
 When ESP32 receives a message it will print a message to screen. 
 
-<img src="pub2.png" width=50%>
+<img src="publish2.png" width=50%>
 
 
 
