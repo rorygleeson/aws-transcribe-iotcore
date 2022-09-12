@@ -46,12 +46,12 @@ Now let us examine how data is "sent" to a sensor by AWS IoT Core. I.E device ha
 
 
 
-## topicPublisher
+## topicPublisher Lambda function
 
 To send a message to the sensor/device, an application is used to send the message first to the AWS API gateway with REST API. When the API gateway receives the message, it will forward it to this Lambda. The Lambda will then publish the message onto the MQTT broker topic. The device should be subscribed to this topic, and will receive the message. 
 
 
-## topicSubscriber
+## topicSubscriber Lambda function
 
 Devices/sensor will send data to an MQTT topic in AWS IoT Core. Messages landing on this MQTT topic, will tirgger this lambda function. The Lambda function will store the sensor data into DynamoDB database. 
 
@@ -59,19 +59,54 @@ Devices/sensor will send data to an MQTT topic in AWS IoT Core. Messages landing
 
 * PublishTopic: (Required) Provide a topic to publish on when API gateway receives a message. The default will publish on topic_1. Ensure this reflects the topic that your device has subscrcribed to. 
 
-* SubscribeTopic: (Required) Provide a topic for the IoT rule to query. The default is topic_2. Ensure this reflects the topic that your device has subscrcribed to. 
-
-
-
-
-
-
-
-
-
+* SubscribeTopic: (Required) Provide a topic for the IoT rule to query. The default is topic_2. Ensure this reflects the topic that your device is publishing to. 
 
 
 ## How to install 
+
+I am using AWS CLoud 9 IDE as my development environment, it comes with SAM CLI installed. You can use any environment as long as you setup AWS SAM CLI. 
+If using Cloud 9 IDE, you can spin it up, do the SAM build and deployment, and then terminate it. 
+
+
+1) Setup or open an existing Cloud9 IDE terminal. 
+2) Download the SAM repository to local environment
+```
+git clone https://github.com/rorygleeson/aws-transcribe-iotcore
+
+cd aws-transcribe-iotcore/sam-lambda-iot-rule
+
+```
+
+3) Perform the following command to build the SAM artifacts:
+
+
+```
+sam build
+
+```
+
+
+4) Deploy the SAM template to your AWS account.
+
+```
+sam deploy --guided --stack-name esp32-lambda-iot-rule
+
+```
+
+5) For default values type enter. Make sure to set the subsciber and publisher topics to reflect your device code. 
+
+add some stuff here ......
+
+6) Please wait few minutes to complete the deployment
+
+
+7) Go into CloudFormation to verify that the stack was sucesfully deployed into your AWS account. 
+
+8) 
+
+
+
+
 
 * Navigate to [AWS IoT Core](https://console.aws.amazon.com/iot) and click on 'Test'
 * Publish a message on the AWS IoT topic set in your query.
