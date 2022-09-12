@@ -24,19 +24,19 @@ Deploy a serverless backend that can both send and receive messages on the AWS I
 
 ## topicPublisher
 
-Receives input from an API Gateway endpoint that is generated and can be found by clicking on the API Gateway node in the main Lambda editor view. Its a REST POST endpoint and will forward the body of the message to the defined AWS IoT topic.
+To send a message to the sensor/device, an application is used to send the message first to the AWS API gateway. When the API gateway receives the message, it will forward it to this Lambda. The Lambda will then publish the message onto the MQTT broker topic. The device should be subscribed to this topic, and will receive the message. 
+
 
 ## topicSubscriber
 
-This Lambda function is invoked by an AWS IoT rule that forwards any messages on the defined AWS IoT topic. It then creates an entry in the generated DynamoDB table as a JSON object consisting of an ID, timestamp, and the forwarded payload.
-
+Devices/sensor will send data to an MQTT topic in AWS IoT Core. Messages landing on this MQTT topic, will tirgger this lambda function. The Lambda function will store the sensor data into DynamoDB database. 
 
 ## Parameter Details
 
-* PublishTopic: (Required) Provide a topic to publish on. The default will publish on topic_1. 
-* SubscribeTopic: (Required) Provide a topic for the IoT rule to query. The default will trigger on any message published to topic_2
+* PublishTopic: (Required) Provide a topic to publish on when API gateway receives a message. The default will publish on topic_1. 
+* SubscribeTopic: (Required) Provide a topic for the IoT rule to query. This is the topic that the device is publishing to. The default is topic_2. 
 
-## Using this Application
+## How to install 
 
 * Navigate to [AWS IoT Core](https://console.aws.amazon.com/iot) and click on 'Test'
 * Publish a message on the AWS IoT topic set in your query.
