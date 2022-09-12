@@ -1,6 +1,13 @@
 # sam-lambda-iot-rule
 
-Deploy a serverless backend that can both send and receive messages on the AWS IoT MQTT message broker. 
+Deploy a serverless backend that 
+
+1)  Receives messages from IoT devices. IoT device publishes message to an MQTT topic on AWS IoT Core. An IoT Rule will pick up all messages that arrive on this topic. The IoT Rule will call a lambda and pass it the received message. The lambda function will store the sensor data into DynamoDB database. 
+
+2)  Sends messages to IoT devices. We need to use REST API (AWS API Gateway) to push a message to a sensor. Using HTTP Post, we first send the message to API Gateway with REST API. API gateway then passes the message to a Lambda function. The Lambda function will write the message to a specified topic on the MQTT message broker. The IoT device is subscribed to this topic, and will pick up the message. 
+
+
+AWS SAM will deploy all the required infrastructure for us. 
 
 We can summarise this infrastructure. 
 
@@ -10,7 +17,7 @@ First let us exmaine how data is "received" from a device by AWS IoT Core. I.E d
 
 <img src="images/receiveData1.png" width=70%>
 
-Now let us examine has data is sent to the sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS Core send message to this topic for the device. 
+Now let us examine has data is sent to a sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS IoT Core sends a message to this topic for the device. 
 
 <img src="images/sendData1.png" width=70%>
 
