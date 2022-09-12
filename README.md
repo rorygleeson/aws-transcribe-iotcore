@@ -51,7 +51,7 @@ As per above, the code is broken down into 3 parts.
 We have device code on the ESP32, which is subscribing to MQTT topic esp32/sub listening for events.  It also publishes a message to MQTT topic esp32/pub every 5 seconds. 
 
 We have to provision all the AWS backend serverless infrastructure, we will use Serverless Application Model (SAM) to do this. 
-The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. We will use the AWS SAM CLI to create a serverless application that we can package and deploy in the AWS Cloud. SAM contains ALL the AWS infrastructure required for this project. Since AWS Cloud 9 comes with SAM already installed, we use Cloud 9 as our development environment. But you can use any other development environment just ensure it is setup accordingly to support AWS SAM CLI. 
+The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. We will use the AWS SAM CLI to create a serverless application that we can package and deploy in the AWS Cloud. SAM contains ALL the AWS infrastructure required for this project. Since AWS Cloud 9 comes with SAM CLI already installed, we use Cloud 9 as our development environment. But you can use any other development environment just ensure it is setup accordingly to support AWS SAM CLI. 
 
 Finally we have the application running on our laptop which has a microphone enabled. This python application requires AWS CLI to be installed on your laptop. I have used Mac OS and terminal. The application streams the live audion to AWS transcribe, and analises the returned text for the approriate command to trigger robot action. 
 
