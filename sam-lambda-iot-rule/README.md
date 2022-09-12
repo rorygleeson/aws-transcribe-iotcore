@@ -2,6 +2,20 @@
 
 Deploy a serverless backend that can both send and receive messages on the AWS IoT MQTT topic stream. 
 
+We can summarise this infrastructure. 
+
+First let us exmaine how data is "received" from a device by AWS IoT Core. I.E device is uploading data to AWS. 
+
+<br/>
+
+<img src="images/receive-sensordata.png" width=70%>
+
+Now let us examine has data is sent to the sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS Core send message to this topic for the device. 
+
+<img src="images/send-sensorData.png" width=70%>
+
+
+
 
 ```bash
 .
@@ -36,23 +50,6 @@ Devices/sensor will send data to an MQTT topic in AWS IoT Core. Messages landing
 
 * PublishTopic: (Required) Provide a topic to publish on when API gateway receives a message. The default will publish on topic_1. 
 * SubscribeTopic: (Required) Provide a topic for the IoT rule to query. This is the topic that the device is publishing to. The default is topic_2. 
-
-
-
-We can summarise this infrastructure. 
-
-First let us exmaine how data is "received" from a device by AWS IoT Core. I.E device is uploading data to AWS. 
-
-<br/>
-
-<img src="images/receive-sensordata.png" width=50%>
-
-Now let us examine has data is sent to the sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS Core send message to this topic for the device. 
-
-<img src="images/send-sensorData.png" width=50%>
-
-
-
 
 
 
