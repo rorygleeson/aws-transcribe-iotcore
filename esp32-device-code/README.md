@@ -172,3 +172,23 @@ Paste the following 3 certs which you downloaded earlier into secrets.h
 
 ###  Step 4  Monitor and test ESP32 ### 
 
+
+In this final step, we will verify that the ESP32 is uploading data to AWS IoT CORE. We can also test that the ESP32 is receiving data from IoT Core.
+
+In the AWS IoT Core console, go to "Test". Here we can monitor the MQTT message broker, and verify that the ESP32 data is being received. 
+
+Subscribe to the topic esp32/pub, since this is the topic ESP32 is publishing messages to. 
+
+
+<img src="mqtt2.png" width=50%>
+
+Verify that you can see the ESP32 messages arriving, they are small messages only containing a time stamp.
+
+<img src="mqtt1.png" width=50%>
+
+
+
+
+
+
+
