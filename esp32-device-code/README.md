@@ -139,19 +139,19 @@ You will need to install the appropriate USB driver for your OS.
 5	Update the secrets.h file. You will need to add the following:
 
 
-THINGNAME	(Set to the name of the thing created in IoT Core)
+**THINGNAME**	(Set to the name of the thing created in IoT Core)
 	
-WIFI_SSID	(Set to the name of the WIFI network the ESP32 will connect to. The network name should not include spaces or special chars)
+**WIFI_SSID**	(Set to the name of the WIFI network the ESP32 will connect to. The network name should not include spaces or special chars)
 	
-WIFI_PASSWORD (Set to the WIFI password)
+**WIFI_PASSWORD** (Set to the WIFI password)
 	
-AWS_IOT_ENDPOINT (Set to value shown in IoT Core -> Settings. It will look like this (a1XXXXXXXXXX1e-ats.iot.ap-southeast-2.amazonaws.com)
+**AWS_IOT_ENDPOINT** (Set to value shown in IoT Core -> Settings. It will look like this (a1XXXXXXXXXX1e-ats.iot.ap-southeast-2.amazonaws.com)
 
 Paste the following 3 certs which you downloaded earlier into secrets.h 
 
-Amazon Root CA 1
-Device Certificate (xxx.certificate.pem.crt)
-Device Private Key (private.pem.key)	
+**Amazon Root CA 1**
+**Device Certificate** (xxx.certificate.pem.crt)
+**Device Private Key** (private.pem.key)	
 
 
 
