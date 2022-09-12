@@ -74,16 +74,15 @@ Finally, we will setup the python application and integrate AWS transcribe into 
 
 ***Step 1***
 
-Configure a thing for the ESP32 in IoTCore. Program the ESP32 device using Arduino IDE. Follw the setup and test instructions from [esp32-device-code](esp32-device-code) to get the ESP32 communicating with IoTCore. 
+Configure a thing for the ESP32 in IoTCore. Program the ESP32 device using Arduino IDE. Follow the setup and test instructions from [esp32-device-code](esp32-device-code) to get the ESP32 communicating with IoTCore. Only move to Step 1 when this is complete and fully tested. 
 
 ***Step 2***
 
-Setup the AWS infrastructure. Follow the setup and test instructions from [sam-lambda-iot-rule](sam-lambda-iot-rule) to setup the infrastructure in your AWS account. We use Cloud 9 to do this. 
+Setup the AWS infrastructure. Follow the setup and test instructions from [sam-lambda-iot-rule](sam-lambda-iot-rule) to setup the infrastructure in your AWS account. We use Cloud 9 to do this. Only move to Step 2 when this is complete and fully tested. 
 
 ***Step 3***
 
 Setup and test the python application which converts audio from your microphone into text, and triggers the IoT event towards the ESP32 to move the servo, when the trigger word is detected. Follow the setup and test instructions from [transcribe-python-app](transcribe-python-app).
-
 
 
 
