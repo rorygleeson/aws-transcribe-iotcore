@@ -70,6 +70,7 @@ If using Cloud 9 IDE, you can spin it up, do the SAM build and deployment, and t
 
 1) Setup or open an existing Cloud9 IDE terminal. 
 2) Download the SAM repository to local environment
+
 ```
 git clone https://github.com/rorygleeson/aws-transcribe-iotcore
 
@@ -78,7 +79,6 @@ cd aws-transcribe-iotcore/sam-lambda-iot-rule
 ```
 
 3) Perform the following command to build the SAM artifacts:
-
 
 ```
 sam build
@@ -96,7 +96,7 @@ sam deploy --guided --stack-name esp32-lambda-iot-rule
 5) For default values type enter. Make sure to set the subsciber and publisher topics to reflect your device code. 
 Since my ESP32 publishes to esp32/pub and subscribes to esp32/sub these are reflected as shown below in the SAM deployment input.
 
-<img src="images/samDeployParameters.png" width=70%>
+<img src="images/samDeployParameters.png" width=80%>
 
 
 6) Please wait few minutes to complete the deployment
