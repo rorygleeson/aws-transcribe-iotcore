@@ -18,7 +18,7 @@ First let us exmaine how data is "received" from a device by AWS IoT Core. I.E d
 
 Now let us examine how data is "sent" to a sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS IoT Core sends a message to this topic for the device. 
 
-<img src="images/SendingSensorData.png" width=70%>
+<img src="images/SendingData.png" width=70%>
 
 
 ## Services Deployed
