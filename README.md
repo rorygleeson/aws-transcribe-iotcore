@@ -21,7 +21,7 @@ The following code will be provided in this project. The solution contains the f
 
 
 
-**Device Code** : The [esp32-device-code](esp32-device-code) folder contains the ESP32 device code, an Arduino C program to run on the ESP32 IoT device. The ESP32 device subsribes to a topic to listen for incoming messages. When it receives an incoming message, it performs the neccesary action to move the servo motor. It also publishes messages to an MQTT topic in IoTCore. For this excercise, we only need to receive messasges in the ESP32, feel free to disable the publising if you want. 
+**Device Code** : The [esp32-device-code](esp32-device-code) folder contains the ESP32 device code, an Arduino C program to run on the ESP32 IoT device. The ESP32 device subsribes to a topic to listen for incoming messages. When it receives an incoming message, it performs the neccesary action to move the servo motor. It also publishes messages to an MQTT topic in IoTCore. For this excercise, we only need to receive messasges in the ESP32,but will also test that the ESP32 is able to upload sensor data into IotCore. 
 
 **AWS Infrastructure** : This is deployed with AWS Serverless Application Model (SAM). The [sam-lambda-iot-rule](sam-lambda-iot-rule) folder contains the SAM deployment for AWS, see its readme for details on how to deploy. It sets up the complete backend infrastructure to handle both receiving and sending of IoT events. This includes provisioning API Gateway, DynamoDB database, 2 Lambda functions (one for receiving and one for publishing MQTT events), IoT rules and also the necessary policies/roles etc.   
 
