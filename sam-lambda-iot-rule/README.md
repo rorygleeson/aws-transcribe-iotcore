@@ -29,16 +29,6 @@ Receives input from an API Gateway endpoint that is generated and can be found b
 
 This Lambda function is invoked by an AWS IoT rule that forwards any messages on the defined AWS IoT topic. It then creates an entry in the generated DynamoDB table as a JSON object consisting of an ID, timestamp, and the forwarded payload.
 
-## Requirements
-
-* AWS CLI already configured with Administrator permission
-* [NodeJS 8.10+ installed](https://nodejs.org/en/download/)
-
-## Installation Instructions
-
-1. [Create an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) if you do not already have one and login.
-1. Go to the app's page on the [Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications/) and click "Deploy"
-1. Provide the required app parameters (see parameter details below) and click "Deploy"
 
 ## Parameter Details
 
@@ -52,6 +42,3 @@ This Lambda function is invoked by an AWS IoT rule that forwards any messages on
 * To confirm the function responded to the event, check the CloudWatch logs for the Lambda function or the contents of the DynamoDB table that was generated for this application. 
 
 ==============================================
-
-Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-SPDX-License-Identifier: MIT-0
