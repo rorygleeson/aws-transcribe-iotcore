@@ -1,5 +1,6 @@
-# Lambda IoT Rule
-Deploy a serverless backend that can both send and receive messages on the AWS IoT topic stream. This includes an AWS Lambda function than can publish an IoT message and a simple AWS IoT Rule that forwards messages from a specific topic to an AWS Lambda function that then updates a DynamoDB table.
+# sam-lambda-iot-rule
+
+Deploy a serverless backend that can both send and receive messages on the AWS IoT MQTT topic stream. This includes an AWS Lambda function than can publish an IoT message and a simple AWS IoT Rule that forwards messages from a specific topic to an AWS Lambda function that then updates a DynamoDB table.
 
 ```bash
 .
@@ -32,7 +33,7 @@ This Lambda function is invoked by an AWS IoT rule that forwards any messages on
 
 ## Parameter Details
 
-* PublishTopic: (Required) Provide a topic to publish on. The default will publish on topic_1
+* PublishTopic: (Required) Provide a topic to publish on. The default will publish on topic_1. 
 * SubscribeTopic: (Required) Provide a topic for the IoT rule to query. The default will trigger on any message published to topic_2
 
 ## Using this Application
