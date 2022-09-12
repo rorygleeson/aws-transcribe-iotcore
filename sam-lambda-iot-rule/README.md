@@ -2,14 +2,13 @@
 
 Deploy a serverless backend that 
 
-1)  Receives messages from IoT devices. IoT device publishes message to an MQTT topic on AWS IoT Core. An IoT Rule will pick up all messages that arrive on this topic. The IoT Rule will call a lambda and pass it the received message. The lambda function will store the sensor data into DynamoDB database. 
+1)  Receives messages from IoT devices. IoT device publishes message to an MQTT topic on AWS IoT Core. An IoT Rule will pick up all messages that arrive on this topic. The IoT Rule will call a lambda and pass it the received message. The lambda function will store the sensor data into DynamoDB database. If the ESP32 is publishing messages to topic esp32/pub, then the IoTRule needs to be configured for topic esp32/pub.
 
-2)  Sends messages to IoT devices. We need to use REST API (AWS API Gateway) to push a message to a sensor. Using HTTP Post, we first send the message to API Gateway with REST API. API gateway then passes the message to a Lambda function. The Lambda function will write the message to a specified topic on the MQTT message broker. The IoT device is subscribed to this topic, and will pick up the message. 
+2)  Sends messages to IoT devices. We need to use REST API (AWS API Gateway) to push a message to a sensor. Using HTTP Post, we first send the message to API Gateway with REST API. API gateway then passes the message to a Lambda function. The Lambda function will write the message to a specified topic on the MQTT message broker. The IoT device is subscribed to this topic, and will pick up the message. For example if the ESP32 is subscribed to topic esp32/sub the AWs IoT Core needs to publish to esp32/sub for the ESP32 to receive the message.
 
+This SAM deployment can be used for many other projects not just this one. 
 
-AWS SAM will deploy all the required infrastructure for us. 
-
-We can summarise this infrastructure. 
+Here is a summary of the infrastructure that SAM will deploy into AWS. 
 
 First let us exmaine how data is "received" from a device by AWS IoT Core. I.E device is uploading data to AWS. 
 
@@ -17,11 +16,20 @@ First let us exmaine how data is "received" from a device by AWS IoT Core. I.E d
 
 <img src="images/receiveData1.png" width=70%>
 
-Now let us examine has data is sent to a sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS IoT Core sends a message to this topic for the device. 
+Now let us examine how data is "sent" to a sensor by AWS IoT Core. I.E device has subscribed to a topic, and AWS IoT Core sends a message to this topic for the device. 
 
 <img src="images/sendData1.png" width=70%>
 
 
+## Services Deployed
+
+* Two AWS Lambda Functions (Described in the next section)
+* A DynamoDB table
+* An AWS IoT Rule 
+* An Amazon API Gateway endpoint
+
+
+## Project Structure
 
 ```bash
 .
@@ -36,12 +44,7 @@ Now let us examine has data is sent to a sensor by AWS IoT Core. I.E device has 
 ├── template.yaml               <-- SAM template
 ```
 
-## Services Deployed
 
-* Two AWS Lambda Functions (Described in the next section)
-* A DynamoDB table
-* An AWS IoT Rule 
-* An Amazon API Gateway endpoint
 
 ## topicPublisher
 
@@ -54,8 +57,9 @@ Devices/sensor will send data to an MQTT topic in AWS IoT Core. Messages landing
 
 ## Parameter Details
 
-* PublishTopic: (Required) Provide a topic to publish on when API gateway receives a message. The default will publish on topic_1. 
-* SubscribeTopic: (Required) Provide a topic for the IoT rule to query. This is the topic that the device is publishing to. The default is topic_2. 
+* PublishTopic: (Required) Provide a topic to publish on when API gateway receives a message. The default will publish on topic_1. Ensure this reflects the topic that your device has subscrcribed to. 
+
+* SubscribeTopic: (Required) Provide a topic for the IoT rule to query. The default is topic_2. Ensure this reflects the topic that your device has subscrcribed to. 
 
 
 
