@@ -74,11 +74,11 @@ Finally, we will setup the python application and integrate AWS transcribe into 
 
 ***Step 1***
 
-Configure a thing for the ESP32 in IoTCore. Program the ESP32 device using Arduino IDE. Follow the setup and test instructions from [esp32-device-code](esp32-device-code) to get the ESP32 communicating with IoTCore. Only move to Step 1 when this is complete and fully tested. 
+Configure a thing for the ESP32 in IoTCore. Program the ESP32 device using Arduino IDE. Follow the setup and test instructions from [esp32-device-code](esp32-device-code) to get the ESP32 communicating with IoTCore. Only move to Step 2 when this is complete and fully tested. 
 
 ***Step 2***
 
-Setup the AWS infrastructure. Follow the setup and test instructions from [sam-lambda-iot-rule](sam-lambda-iot-rule) to setup the infrastructure in your AWS account. We use Cloud 9 to do this. Only move to Step 2 when this is complete and fully tested. 
+Setup the AWS infrastructure. Follow the setup and test instructions from [sam-lambda-iot-rule](sam-lambda-iot-rule) to setup the infrastructure in your AWS account. We use Cloud 9 to do this. Only move to Step 3 when this is complete and fully tested. 
 
 ***Step 3***
 
