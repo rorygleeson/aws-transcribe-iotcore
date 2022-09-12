@@ -11,7 +11,7 @@ To setup an IoT device, in this case the ESP32, to communicate securely with AWS
 - Monitor and test ESP32 can send and receive data from IoTCore. 
 
 <br/>
-<img src="ESP32-MQTT.png" width=50%>
+<img src="images/ESP32-MQTT.png" width=50%>
 
 After completing this, we will be able to send and receive data from the ESP32 to/from AWS IoT Core. 
 
@@ -83,7 +83,7 @@ Congradulations, the ESP32 device has been provisioned into IoT Core.
 If you want to connect to lego, you will need a servo motor. The following diagram shows how this is wired up to the ESP32. 
 I have used the Wemos Lolin32 dev board, but you can use any ESP32 dev board, just update the arduino program to reflect the pin you use to drive the servo. 
 
-<img src="ESP32Circuit.png" width=50%>
+<img src="images/ESP32Circuit.png" width=50%>
 
 Connect the servo control to GPIO 12. Connect servo positive to 5v output on ESP32 dev board. Connect servo ground to ground on ESP32 dev board. 
 This assumes you are powering the dev board via micro usb cable. With batteries the 5V output may not be guaranteed, so you may require additonal circuitry. 
@@ -163,7 +163,7 @@ Paste the following 3 certs which you downloaded earlier into secrets.h
 
 9) Read the ESP32 print output, you should see the following:
 
-<img src="arduinoDebug.png" width=50%>
+<img src="images/arduinoDebug.png" width=50%>
 
 
 
@@ -180,11 +180,11 @@ In the AWS IoT Core console, go to "Test". Here we can monitor the MQTT message 
 Subscribe to the topic esp32/pub, since this is the topic ESP32 is publishing messages to. 
 
 
-<img src="mqtt2.png" width=50%>
+<img src="images/mqtt2.png" width=50%>
 
 Verify that you can see the ESP32 messages arriving, they are small messages only containing a time stamp.
 
-<img src="mqtt1.png" width=50%>
+<img src="images/mqtt1.png" width=50%>
 
 We have not confirmed ESP32 is able to send messages to AWS IoT Core !
 
@@ -193,11 +193,11 @@ The final test is to ensure that the ESP32 can receive messages from AWS IoT Cor
 
 Publish a message to ESP32 while monitoring the ESP32 in Arduino serial monitor. The ESP32 is subscribed to esp32/sub. Therefore from IoT Core we will publish a message to esp32/sub. Enter esp32/pub in the publish window, and hit publish. 
 
-<img src="publish1.png" width=50%>
+<img src="images/publish1.png" width=50%>
 
 When ESP32 receives a message it will print a message to screen. Ensure you get the red part of this message in Arduino Serial monitor. 
 
-<img src="publish3.png" width=40%>
+<img src="images/publish3.png" width=40%>
 
 
 
