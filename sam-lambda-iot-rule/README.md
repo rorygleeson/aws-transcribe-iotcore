@@ -110,7 +110,7 @@ Since my ESP32 publishes to esp32/pub and subscribes to esp32/sub these are refl
 <img src="images/stackComplete.png" width=80%>
 
 
-8) Go to the CloudFormation output tab, and get the name of the API gateway end point, APIurl. Tbis is tbe URL used to send data to the device.
+8) Go to the CloudFormation output tab, and get the name of the API gateway end point, ApiURL Tbis is tbe URL used to send data to the device.
 Make a note of it as we will need it later. 
 
 <img src="images/stackOutput.png" width=80%>
