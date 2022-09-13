@@ -120,13 +120,20 @@ Make a note of it as we will need it later.
 
 ## Testing 
 
-1) First test that the sensor can send data to AWS IoT. We do this by monitoring the topic that the ESP32 device sends data to. In Iot Core open test and subscribe to that topic (esp32/pub). Verify that every 5 seconds data arrives. This verifies that the device is communcating with Iot Core. 
+### Test Sensor data is received by IoT Core 
+
+1) First test that the sensor can send data to AWS IoT. We do this by monitoring the topic that the ESP32 device sends data to. In IoT Core open test and subscribe to that topic (esp32/pub). Verify that every 5 seconds data arrives. This verifies that the device is communcating with Iot Core. 
+<br/>
+<img src="images/IncomingSensorData.png" width=80%>
+<br/>
 
 
 
+2) Verify that the data is inserted into the DynamoDb. To ensure the full data ingestion process is working, we verify that the sensor data is stored in DynamoDB. When you used SAM to deploy the Infrastructure, a DynamoDB was created, you will find its details in CloudFormation for the stack you deployed. 
 
-
-2) Verify that the data is inserted into the DynamoDb. To ensure the full data ingestion process is working, we verify that the sensor data is stored in DynamoDB. 
+<br/>
+<img src="images/stackComplete.png" width=80%>
+<br/>
 
 
 
