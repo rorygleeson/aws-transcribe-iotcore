@@ -175,5 +175,13 @@ Verify that the ESP32 has received the message, it will print the following mess
 
 
 
+<br/>
+<img src="images/esp32Success.png" width=80%>
+<br/>
+
+We have tested that sending a HTTP request with our message, to API gateway, has tirgged the Lambda which publishes the message onto the topic. And since ESP32 is subscribed to this topic, we have verified that is has received the message. 
+
+Congradulations, you have now verified that our SAW deployment of the AWs Infrastructure has worked. 
+
 
 
