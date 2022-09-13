@@ -106,22 +106,20 @@ Since my ESP32 publishes to esp32/pub and subscribes to esp32/sub these are refl
 
 
 7) Go into CloudFormation to verify that the stack was sucesfully deployed into your AWS account
-
+<br/>
 <img src="images/stackComplete.png" width=80%>
-
+<br/>
 
 8) Go to the CloudFormation output tab, and get the name of the API gateway end point, ApiURL Tbis is tbe URL used to send data to the device.
 Make a note of it as we will need it later. 
-
+<br/>
 <img src="images/stackOutput.png" width=80%>
+<br/>
 
 
 
-
-
+## Testing 
 
 * Navigate to [AWS IoT Core](https://console.aws.amazon.com/iot) and click on 'Test'
 * Publish a message on the AWS IoT topic set in your query.
 * To confirm the function responded to the event, check the CloudWatch logs for the Lambda function or the contents of the DynamoDB table that was generated for this application. 
-
-==============================================
