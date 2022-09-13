@@ -152,10 +152,28 @@ We have tested and verified that sensor data ingestion is working.
 
 ### Test we can send a message to the IoT device
 
+As explained, messages are sent to the IoT device (ESP32) via AWS API gateway. So let us test this.
+
+When the AWS Infrastructure was deployed by SAM, we noted the URL of the API Gateway, we will need this now. You will find this under the stack "outputs". 
+
+<br/>
+<img src="images/stackOutput.png" width=80%>
+<br/>
+
+
+
+Open the ESP32 serial montor in Arduino and watch the print outputs. 
+
+From a command line issue the following to trigger the API. Replace ENDPOINT with the API Gateway end point you recorded in previous step. 
+
+```
+curl -d '{"text":"Hello world!"}' -H "Content-Type: application/json" -X POST https://ENDPOINT/publish
+
+```
+
+Verify that the ESP32 has received the message, it will print the following message. 
 
 
 
 
-* Navigate to [AWS IoT Core](https://console.aws.amazon.com/iot) and click on 'Test'
-* Publish a message on the AWS IoT topic set in your query.
-* To confirm the function responded to the event, check the CloudWatch logs for the Lambda function or the contents of the DynamoDB table that was generated for this application. 
+
