@@ -141,7 +141,7 @@ Now go to the newly created DynamoDB.
 <img src="images/exploreDynamoDB.png" width=80%>
 <br/>
 
-Click on Explore and verify that the sensor data is stored in the database. This shows that the Lambda function used to handle incoming sensor data was successfully triggered and inserted the sensor data into the database. 
+Click on "Explore Table Items" and verify that the sensor data is stored in the database. This shows that the Lambda function used to handle incoming sensor data was successfully triggered and inserted the sensor data into the database. 
 
 <br/>
 <img src="images/dynamoDBdata.png" width=80%>
