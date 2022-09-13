@@ -122,14 +122,14 @@ Make a note of it as we will need it later.
 
 ### Test Sensor data is received by IoT Core 
 
-1) First test that the sensor can send data to AWS IoT. We do this by monitoring the topic that the ESP32 device sends data to. In IoT Core open test and subscribe to that topic (esp32/pub). Verify that every 5 seconds data arrives. This verifies that the device is communcating with Iot Core. 
+1) First test that the sensor can send data to AWS IoT. We do this by monitoring the topic that the ESP32 device sends data to. In IoT Core under "test"  subscribe to that topic (esp32/pub). Verify that every 5 seconds data arrives. This verifies that the device is communcating with Iot Core. 
 <br/>
 <img src="images/IncomingSensorData.png" width=80%>
 <br/>
 
 
 
-2) Verify that the data is inserted into the DynamoDb. To ensure the full data ingestion process is working, we verify that the sensor data is stored in DynamoDB. When you used SAM to deploy the Infrastructure, a DynamoDB was created, you will find its details in CloudFormation under resource, for the stack you deployed. 
+2) Verify that the data is inserted into the DynamoDb. To ensure the full data ingestion process is working, we verify that the sensor data is stored in DynamoDB. When you used SAM to deploy the Infrastructure, a DynamoDB was created, you will find its details in CloudFormation under resources, for the stack you deployed. 
 
 <br/>
 <img src="images/CFdynamoDB.png" width=80%>
@@ -141,11 +141,18 @@ Now go to the newly created DynamoDB.
 <img src="images/exploreDynamoDB.png" width=80%>
 <br/>
 
-Click on Explore and verify that the sensor data is stored in the database. 
+Click on Explore and verify that the sensor data is stored in the database. This shows that the Lambda function used to handle incoming sensor data was successfully triggered and inserted the sensor data into the database. 
 
 <br/>
 <img src="images/dynamoDBdata.png" width=80%>
 <br/>
+
+We have tested and verified that sensor data ingestion is working. 
+
+
+### Test we can send a message to the IoT device
+
+
 
 
 
