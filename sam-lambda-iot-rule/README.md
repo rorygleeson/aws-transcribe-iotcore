@@ -120,6 +120,18 @@ Make a note of it as we will need it later.
 
 ## Testing 
 
+1) First test that the sensor can send data to AWS IoT. We do this by monitoring the topic that the ESP32 device sends data to. In Iot Core open test and subscribe to that topic (esp32/pub). Verify that every 5 seconds data arrives. This verifies that the device is communcating with Iot Core. 
+
+
+
+
+
+2) Verify that the data is inserted into the DynamoDb. To ensure the full data ingestion process is working, we verify that the sensor data is stored in DynamoDB. 
+
+
+
+
+
 * Navigate to [AWS IoT Core](https://console.aws.amazon.com/iot) and click on 'Test'
 * Publish a message on the AWS IoT topic set in your query.
 * To confirm the function responded to the event, check the CloudWatch logs for the Lambda function or the contents of the DynamoDB table that was generated for this application. 
