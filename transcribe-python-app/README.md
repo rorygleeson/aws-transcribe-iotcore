@@ -11,6 +11,8 @@ python -m pip install amazon-transcribe aiofile
 
 python -m pip install sounddevice
 
+python -m pip install requests
+
 Ensure AWS CLI configured with necessary IAM user details.
 
 * Note * I have tested this on Mac OS terminal, but you can use any environment. 
