@@ -129,13 +129,23 @@ Make a note of it as we will need it later.
 
 
 
-2) Verify that the data is inserted into the DynamoDb. To ensure the full data ingestion process is working, we verify that the sensor data is stored in DynamoDB. When you used SAM to deploy the Infrastructure, a DynamoDB was created, you will find its details in CloudFormation for the stack you deployed. 
+2) Verify that the data is inserted into the DynamoDb. To ensure the full data ingestion process is working, we verify that the sensor data is stored in DynamoDB. When you used SAM to deploy the Infrastructure, a DynamoDB was created, you will find its details in CloudFormation under resource, for the stack you deployed. 
 
 <br/>
-<img src="images/stackComplete.png" width=80%>
+<img src="images/CFdynamoDB.png" width=80%>
 <br/>
 
+Now go to the newly created DynamoDB. 
 
+<br/>
+<img src="images/exploreDynamoDB.png" width=80%>
+<br/>
+
+Click on Explore and verify that the sensor data is stored in the database. 
+
+<br/>
+<img src="images/dynamoDBdata.png" width=80%>
+<br/>
 
 
 
