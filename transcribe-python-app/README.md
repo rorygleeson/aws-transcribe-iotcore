@@ -95,10 +95,18 @@ Talk into you laptop microphone, verify that your speech is being converted into
 
 
 Say the "Key word(s)" to trigger the action to the Iot device. 
-Verify that the python scripts prints the following to screen. 
+Verify that the python scripts prints the following to screen, indicating it detected the key work. 
+
+
+
 <br/>
 <img src="images/sayKeyword.png" width=60%>
 <br/>
+
+
+
+If you have connected a servo motor to your IoT device, verify it moves. Verify the IoT device has received the event and performed necessary action. 
+You can examine the Arduino Serial monitor to verif this also. 
 
 
 
