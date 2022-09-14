@@ -105,8 +105,10 @@ Verify that the python scripts prints the following to screen, indicating it det
 
 
 
-If you have connected a servo motor to your IoT device, verify it moves. Verify the IoT device has received the event and performed necessary action. 
-You can examine the Arduino Serial monitor to verif this also. 
+If you have connected a servo motor to your IoT device, verify it moves. 
+
+Verify the IoT device has received the event and performed necessary action. 
+You can examine the Arduino Serial monitor to verify this. Or else you can monitor the MQTT topic to which the IoT device has subscribed, and verify the message appears here.  
 
 
 
