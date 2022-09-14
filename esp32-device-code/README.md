@@ -128,7 +128,7 @@ The Arduino IDE is now installed and configured with all the board definitions a
 We will connect the ESP32 to Arduino IDE using USB serial cable. We also use this USB cable to power the ESP32. 
 You will need to install the appropriate USB driver for your OS. 
 
-1) Install the required serial USB drivers for your device. Some boards use different USB/FTDI chips for interfacing. Here are the most commonly used with links to drivers. There are plenty of tuorials on the net to help with this. 
+1) Install the required serial USB drivers for your device. Some boards use different USB/FTDI chips for interfacing.There are plenty of tuorials on the net to help with this. 
 	
 2) Open the Arduino IDE and choose File, New to create a new sketch.
 
