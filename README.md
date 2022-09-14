@@ -6,7 +6,7 @@ Voice control of an IoT device using AWS Transcribe and IoT Core. We can connect
 <br/>
 
 
-<img src="esp32-lego.jpg" width=60%>
+<img src="esp32-lego.jpg" width=50%>
 
 
 ## Introduction ##
@@ -32,7 +32,8 @@ Here is a digram of the overall architecture. Please read the readme file associ
 
 <br/><br/>
 
-![My Image](architectureHighLevel.png)
+<img src="architectureHighLevel" width=50%>
+
 <br/><br/>
 
 **1** Microphone audio signal is processed by the python script. It sends the audio data to AWS Transcribe API. 
