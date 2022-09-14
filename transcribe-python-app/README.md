@@ -94,6 +94,13 @@ Talk into you laptop microphone, verify that your speech is being converted into
 
 
 
+Say the "Key word(s)" to trigger the action to the Iot device. 
+Verify that the python scripts prints the following to screen. 
+<br/>
+<img src="images/sayKeyword.png" width=60%>
+<br/>
+
+
 
 Congradulations, you have now used AWS Transcribe service, to control an IoT device. 
 
