@@ -34,9 +34,6 @@ class MyEventHandler(TranscriptResultStreamHandler):
                     print("YES, move robot")
                     r=requests.post('https://tsfpuu7iwe.execute-api.ap-southeast-2.amazonaws.com/Prod/publish')
                     break
-                elif "bubble" in mystring:
-                     print("No, do not move robot")
-                     break
                 else:
                     print("..")
 
