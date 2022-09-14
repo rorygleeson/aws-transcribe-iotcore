@@ -68,20 +68,15 @@ python -m pip install requests
 
 Copy the python script from this repository into your environment. 
 
-Update the following with the HTTP end point you want to POST to when the key word is detected. In this example we are posting a HTTP request to the AWS API Gateway we created in the previous excercise. Update to reflect the API created by SAM.
+Update the python script with the HTTP end point you want to POST to when the key word is detected. In this example we are posting a HTTP request to the AWS API Gateway we created in the previous excercise. Update to reflect the API created by SAM.
+
+Update the keyword if required, I am checking for the words "burst the balloon". When I detect that, you will see that the script then calls the API gateway via the HTTP request, which triggers an MQTT message to the IoT device. The IoT device will then perform the necessary action. 
+Update the script to suit your requirements, for example you may want to change the key word used to trigger the IoT device action to a different word or phrase. 
 
 
-<br/>
-<img src="images/updateKeywork.png" width=60%>
-<br/>
-
-
-
-Update the python script if required, to reflect the voice command that you want to use to send the command to the Iot device. In the python script provided, I am checking for the word "balloon". When I detect that, you will see that the script then calls the API gateway via the HTTP request, which triggers an MQTT message to the IoT device. The IoT device will then perform the necessary action. 
-Update the script to suit your requirements, for example you may want to change the key word used to trigger the IoT device action. 
 
 <br/>
-<img src="images/changeKeyword.png" width=60%>
+<img src="images/pythonCodeChanges.png" width=60%>
 <br/>
 
 
