@@ -1,7 +1,7 @@
 # aws-transcribe-iotcore
 <br/>
 
-Voice control of an IoT device using AWS Transcribe and IoT Core. We can connect the ESP32 to a servo motor to control lego, but you can skip this part and control for example a LED on the ESP32. 
+Voice control of an IoT device using AWS Transcribe and IoT Core. We can connect the ESP32 to a servo motor to control lego, but you can skip this part and voice control for example a LED on the ESP32. 
 
 <br/>
 
