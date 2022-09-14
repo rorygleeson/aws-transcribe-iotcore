@@ -5,14 +5,43 @@ Simple Python script to do real-time speech to text translation. Talk into micro
 
 Based on this: https://github.com/awslabs/amazon-transcribe-streaming-sdk
 
-## Setup
+## Prerequisites
 
 You will need AWS CLI installed on your laptop. 
+
 Ensure that the AWS CLI is configured with a user that has necessary IAM permissions to access Transcribe. 
 
+I created a user and enabled **Programmatic access**
+
+Then use the created Access Key ID and Secret access key to configure the AWS CLI. 
+
+Here is the policy I used to allow Transcribe access. Note you should add further restrictions to this for increased security.
+
+```
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "transcribe:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+```
 
 
 
+## Setup
+
+The steps below will:
+
+Install the AWS Transcribe SDK. 
+Install other libraries required. 
 
 ```
 python -m pip install amazon-transcribe aiofile
@@ -21,8 +50,8 @@ python -m pip install sounddevice
 
 python -m pip install requests
 
-```
 
-Ensure AWS CLI configured with necessary IAM user details.
+* Note * I have tested this on Mac OS and windows terminals. 
 
-* Note * I have tested this on Mac OS terminal, but you can use any environment. 
+
+
