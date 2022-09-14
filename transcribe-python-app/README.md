@@ -46,7 +46,7 @@ Here is the user policy.
 ### Step 1  ### 
 
 
-Install transcribe SDK and necessary python libraries.
+Install ranscribe SDK and necessary python libraries.
 
 Install the AWS Transcribe SDK. 
 
@@ -84,9 +84,14 @@ Update the script to suit your requirements, for example you may want to change 
 
 ## Test
 
-Run the pything script and verify it runs without errors.
+Run the python script and verify it runs without errors.
 
 Talk into you laptop microphone, verify that your speech is being converted into text and returned to the python script. 
+
+<br/>
+<img src="images/usingTranscribeRealtime.png" width=60%>
+<br/>
+
 
 
 
