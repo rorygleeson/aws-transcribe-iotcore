@@ -1,7 +1,11 @@
 # transcribe-python-app
 
 
-Simple Python script to do real-time speech to text translation. Talk into microphone, the script will in realtime send the audio to AWS transcribe using the Transcribe API. The audio is converted into text and returned to the script for handling. Currtently the script prints all returned text to screen. It examines the returned text looking for the key work that will trigger an action to the ESP32 servo. Once it detects the key work has been spoken, it initilises the communication with the ESP32 device by sending a HTTP Post to the API gateway we have deployed by sam-lambda-iot-rule.
+Simple Python script to do real-time speech to text translation. Talk into microphone, the script will in realtime send the audio to AWS transcribe using the Transcribe API. The audio is converted into text and returned to the script for handling. 
+
+Currtently the script prints all returned text to screen. It examines the returned text looking for the key work that will trigger an action to the ESP32 servo. 
+
+Once it detects the key work has been spoken, it initilises the communication with the ESP32 device by sending a HTTP Post to the API gateway we have deployed by sam-lambda-iot-rule. Feel free to change this to any HTTPS end point to suit your needs. 
 
 Based on this: https://github.com/awslabs/amazon-transcribe-streaming-sdk
 
@@ -37,10 +41,17 @@ Here is the user policy.
 
 ## Setup
 
-The steps below will:
+*Note* I have tested this on MacOS and Windows 10. 
+
+### Step 1  ### 
+
+
+Install transcribe SDK and necessary python libraries.
 
 Install the AWS Transcribe SDK. 
+
 Install other libraries required. 
+
 
 ```
 python -m pip install amazon-transcribe aiofile
@@ -50,7 +61,30 @@ python -m pip install sounddevice
 python -m pip install requests
 
 ```
-*Note* I have tested this on Mac OS and windows terminals. 
+
+
+
+### Step 2  ### 
+
+Copy the python script from this repository into your environment. 
+
+Update the following with the HTTP end point you want to POST to when the key word is detected. In this example we are posting a HTTP request to the AWS API Gateway we created in the previous excercise. Update to reflect the API created by SAM.
+
+
+<br/>
+<img src="images/updateKeywork.png" width=60%>
+<br/>
+
+
+
+Update the python script if required, to reflect the voice command that you want to use to send the command to the Iot device. In the python script provided, I am checking for the word "balloon". When I detect that, you will see that the script then calls the API gateway via the HTTP request, which triggers an MQTT message to the IoT device. The IoT device will then perform the necessary action. 
+Update the script to suit your requirements, for example you may want to change the key word used to trigger the IoT device action. 
+
+<br/>
+<img src="images/changeKeyword.png" width=60%>
+<br/>
+
+
 
 
 ## Test
@@ -59,8 +93,6 @@ Run the pything script and verify it runs without errors.
 
 Talk into you laptop microphone, verify that your speech is being converted into text and returned to the python script. 
 
-Update the python script if required, to reflect the voice command that you want to use to send the command to the Iot device. In the same script provided, I am checking for the word "balloon". When I detect that, you will see that the script then calls the API gateway via the HTTP request, which triggers an MQTT message to the IoT device. The IoT device will then perform the necessary action. 
-Update the script to suit your requirements, for example you may want to change the key work. 
 
 
 Congradulations, you have now used AWS Transcribe service, to control an IoT device. 
