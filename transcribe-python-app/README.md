@@ -100,7 +100,7 @@ Verify that the python scripts prints the following to screen, indicating it det
 
 
 <br/>
-<img src="images/sayKeyword.png" width=60%>
+<img src="images/testKeyPhrase.png" width=60%>
 <br/>
 
 
