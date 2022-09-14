@@ -50,7 +50,27 @@ python -m pip install sounddevice
 python -m pip install requests
 
 ```
-* Note * I have tested this on Mac OS and windows terminals. 
+*Note* I have tested this on Mac OS and windows terminals. 
+
+
+## Test
+
+Run the pything script and verify it runs without errors.
+
+Talk into you laptop microphone, verify that your speech is being converted into text and returned to the python script. 
+
+Update the python script if required, to reflect the voice command that you want to use to send the command to the Iot device. In the same script provided, I am checking for the word "balloon". When I detect that, you will see that the script then calls the API gateway via the HTTP request, which triggers an MQTT message to the IoT device. The IoT device will then perform the necessary action. 
+Update the script to suit your requirements, for example you may want to change the key work. 
+
+
+Congradulations, you have now used AWS Transcribe service, to control an IoT device. 
+
+
+
+
+
+
+
 
 
 
