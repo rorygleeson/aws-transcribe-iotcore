@@ -16,7 +16,8 @@ communications with IoT devices. This means we can control our IoT device with v
 
 We will use an ESP32 dev board as the IoT device. The ESP32 is connected to an SG90 Servo motor, which in turn is used to control the lego rebot. The device can of course do any other action, just replace the robot part of the device code (which is contained in the [runRobot()](esp32-device-code/esp32code.ino) function) if required. For example you could just flash a LED instead of controlling a servo. But thats not as much fun ;-) The ESP32 uses WIFI for connectivity, the local WIFI network access details are stored in the ESP32 secrets.h file. Also stored in secrets.h file are the X.509 certificates used for the secure MQTT communication.
 
-The following code will be provided in this project. The solution contains the following 3 components. Note, each component can be used independently, for example if you only want to run the  
+The following code will be provided in this project. The solution contains the following 3 components.
+ 
 
 
 
