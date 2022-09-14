@@ -94,7 +94,7 @@ Talk into you laptop microphone, verify that your speech is being converted into
 
 
 
-Say the "Key word(s)" to trigger the action to the Iot device. 
+Say the "Key word(s)" to trigger the action to the IoT device. 
 Verify that the python scripts prints the following to screen, indicating it detected the key work. 
 
 
