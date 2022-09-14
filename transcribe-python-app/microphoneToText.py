@@ -29,8 +29,7 @@ class MyEventHandler(TranscriptResultStreamHandler):
                 # print(alt.transcript.lower())
                 mystring = alt.transcript.lower()
                 print(mystring)
-                print("=====")
-                if "balloon" in mystring:
+                if "burst the balloon" in mystring:
                     print("YES, move robot")
                     r=requests.post('https://tsfpuu7iwe.execute-api.ap-southeast-2.amazonaws.com/Prod/publish')
                     break
