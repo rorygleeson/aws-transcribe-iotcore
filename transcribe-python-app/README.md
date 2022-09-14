@@ -46,7 +46,7 @@ Here is the user policy.
 ### Step 1  ### 
 
 
-Install ranscribe SDK and necessary python libraries.
+Install AWS Transcribe SDK and necessary python libraries.
 
 Install the AWS Transcribe SDK. 
 
@@ -76,7 +76,7 @@ Update the script to suit your requirements, for example you may want to change 
 
 
 <br/>
-<img src="images/pythonCodeChanges.png" width=60%>
+<img src="images/codeModsPython.png" width=60%>
 <br/>
 
 
