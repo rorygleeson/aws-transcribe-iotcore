@@ -32,7 +32,7 @@ Here is a digram of the overall architecture. Please read the readme file associ
 
 <br/><br/>
 
-<img src="architectureHighLevel.png" width=50%>
+<img src="architectureHighLevel.png" width=65%>
 
 <br/><br/>
 
