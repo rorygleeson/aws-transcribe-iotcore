@@ -31,7 +31,7 @@ class MyEventHandler(TranscriptResultStreamHandler):
                 print(mystring)
                 if "burst the balloon" in mystring:
                     print("YES, move robot")
-                    r=requests.post('https://hfqnurkrq5.execute-api.ap-southeast-2.amazonaws.com/Prod/publish')
+                    r=requests.post('https://hxxxxxxxx5.execute-api.ap-southeast-2.amazonaws.com/Prod/publish')
                     break
                 else:
                     print("..")
