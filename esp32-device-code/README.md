@@ -186,7 +186,7 @@ Verify that you can see the ESP32 messages arriving, they are small messages onl
 
 <img src="images/mqtt1.png" width=50%>
 
-We have not confirmed ESP32 is able to send messages to AWS IoT Core !
+We have now confirmed ESP32 is able to send messages to AWS IoT Core !
 
 
 The final test is to ensure that the ESP32 can receive messages from AWS IoT Core. The MQTT broker allows us to do a publish. 
