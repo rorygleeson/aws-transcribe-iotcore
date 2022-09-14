@@ -11,14 +11,11 @@ You will need AWS CLI installed on your laptop.
 
 Ensure that the AWS CLI is configured with a user that has necessary IAM permissions to access Transcribe. 
 
-I created a user and enabled **Programmatic access**
+I created a user in AWS IAM (with **Programmatic access**), and added the following policy. Configure AWS CLI with this user. 
 
-Then use the created Access Key ID and Secret access key to configure the AWS CLI. 
-
-Here is the policy I used to allow Transcribe access. Note you should add further restrictions to this for increased security.
+Here is the user policy. 
 
 ```
-
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -31,8 +28,10 @@ Here is the policy I used to allow Transcribe access. Note you should add furthe
         }
     ]
 }
-
 ```
+
+
+
 
 
 
@@ -50,7 +49,7 @@ python -m pip install sounddevice
 
 python -m pip install requests
 
-
+```
 * Note * I have tested this on Mac OS and windows terminals. 
 
 
